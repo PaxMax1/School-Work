@@ -5,7 +5,7 @@ import turtle as trtl
 spider = trtl.Turtle()
 spider.pensize(40)
 spider.circle(20)
-spider_legs = 8
+spider_legs = 6
 spider_leg_length = 70
 leg_angle = 380 / spider_legs
 print("Leg Angle =", leg_angle)
