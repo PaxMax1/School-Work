@@ -11,7 +11,7 @@ spider.circle(20)
 
 #   This is to configure the spiders legs
 
-spider_legs = 8
+spider_legs = 6
 spider_leg_length = 70
 leg_angle = 380 / spider_legs
 print("Leg Angle =", leg_angle)
