@@ -307,7 +307,7 @@ def moving_clouds():
             
 
 
-    
+#To Call All Functions And Events    
 sky()
 ground()
 tree_trunk()
