@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter.font import Font
+from tkinter import ttk
 import random
 from PIL import Image,ImageTk
 
@@ -21,6 +22,10 @@ for frame in frameList:
 	frame.grid(row=0, column=0, sticky='news')
 	frame.configure(bg='white')
 
+# Product Descriptions
+productdescription1 = "hi"
+productdescription2 = "hi"
+
 # Price Variables
 price1="price1"
 price2="price2"
@@ -35,7 +40,7 @@ def moveToproduct1():
 	raiseFrame(imageFrame1)
 
 
-def moveToLproduct2():
+def moveToproduct2():
 	raiseFrame(gameFrame)
 
 def dummy():
@@ -47,11 +52,13 @@ labelFont = Font(family="Arial", size="24")
 buttonFont = Font(family="Arial", size="20")
 helpfont = Font(family="Ariel", size="36")
 
+'''
 #Define Image
 product1buttonimage=Image.open("200pixref.jpg")
 product1buttonimageph=ImageTk.PhotoImage(product1buttonimage)
 product2buttonimage=Image.open("200pixref.jpg")
 product2buttonimageph=ImageTk.PhotoImage(product2buttonimage)
+'''
 
 # Labels
 titleLabel = tk.Label(gameFrame, text="$ Which Costs More? $", font=titleFont, fg='green', bg='light green')
@@ -64,16 +71,14 @@ price2Label = tk.Label(gameFrame, text= price2, font=helpfont, bg='white', fg='g
 price2Label.grid(row=4, column=5)
 
 # Buttons
-loginButton = tk.Button(gameFrame, command=dummy, image=product1buttonimageph)
-loginButton.image=product1buttonimageph
-loginButton.grid(row=5, column=5, padx=20, pady=20)
-regButton = tk.Button(imageFrame1, command=dummy, image=product2buttonimageph)
-regButton.image=product2buttonimageph
-regButton.grid(row=7, column=2)
-restartButton = tk.Button(gameFrame, command=dummy, text="Restart")
+image2Button = tk.Button(gameFrame, command=dummy, font=buttonFont, text= productdescription2)
+image2Button.grid(row=5, column=5, padx=20, pady=20 )
+image1Button = tk.Button(imageFrame1, command=dummy, font=buttonFont, text= productdescription1)
+image1Button.grid(row=7, column=2,)
+restartButton = tk.Button(gameFrame, command=dummy, text="Restart", font = buttonFont)
 restartButton.grid(row=5, column=3)
-moveToRegButton = tk.Button(gameFrame, command=dummy, image=product2buttonimageph)
-moveToRegButton.grid(row=5, column=1)
+moveToimage1Button = tk.Button(gameFrame, command=dummy, font=buttonFont, text=productdescription1, width=20)
+moveToimage1Button.grid(row=5, column=1)
 
 # Window Launch
 raiseFrame(gameFrame)
