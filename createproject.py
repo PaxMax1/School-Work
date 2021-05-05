@@ -22,7 +22,7 @@ frameList = [gameFrame, imageFrame1, imageFrame2, price1Frame, price2Frame]
 for frame in frameList:
 	frame.grid(row=0, column=0, sticky='news')
 	frame.configure(bg='white')
-root.wm_geometry("1000x500")
+root.wm_geometry("1413x500")
 gameFrame.winfo_height=500
 gameFrame.winfo_width=1000
 root.configure(bg="white")
@@ -81,9 +81,9 @@ image1Button = tk.Button(imageFrame1, command=dummy, font=buttonFont, text= prod
 image1Button.grid(row=7, column=2,)
 restartButton = tk.Button(gameFrame, command=dummy, text="Restart", font = buttonFont)
 restartButton.grid(row=5, column=3)
-moveToimage1Button = tk.Button(gameFrame, command=dummy, font=buttonFont, text=productdescription1, width=20)
+moveToimage1Button = tk.Button(gameFrame, command=dummy, font=buttonFont, text=productdescription1, width=40)
 moveToimage1Button.grid(row=5, column=1)
-moveToimage2Button = tk.Button(gameFrame, command=dummy, font=buttonFont, text=productdescription1, width=20)
+moveToimage2Button = tk.Button(gameFrame, command=dummy, font=buttonFont, text=productdescription1, width=40)
 moveToimage2Button.grid(row=5, column=5)
 
 # Window Launch
