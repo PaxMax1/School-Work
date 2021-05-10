@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 # Set Up Tkinter Root
 root = tk.Tk()
 root.title("Amazon Guessing Game")
+print("Get Ready To PLay!")
 
 # Grab HTML with BS4
 data = BeautifulSoup(requests.get('http://imfeelingprimey.com').text, features="lxml")
@@ -174,5 +175,6 @@ product2button = tk.Button(gameFrame, command=choice2, font=buttonFont, textvari
 product2button.grid(row=5, column=5)
 
 # Initialize the window
+print("Here We Go!")
 raiseFrame(gameFrame)
 root.mainloop()
