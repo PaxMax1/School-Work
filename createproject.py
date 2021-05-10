@@ -100,7 +100,6 @@ def calcchoice():
 	# Make prices visible
 	price1Label.config(fg='gold')
 	price2Label.config(fg='gold')
-	correctLabel.config(fg='blue')
 	# Subtract cleaned up prices (subtract left option price from right option price)
 	calc = int(float(((str((price1split[1])).replace('$','')).replace(' ','')).replace(',',''))) - int(float((((str(price2split[1])).replace('$','')).replace(' ','')).replace(',','')))
 	product1button.config(command=restart)
