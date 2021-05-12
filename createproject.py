@@ -8,7 +8,6 @@ from bs4 import BeautifulSoup
 # Set Up Tkinter Root
 root = tk.Tk()
 root.title("Amazon Guessing Game")
-print("Get Ready To PLay!")
 
 # Grab HTML with BS4
 data = BeautifulSoup(requests.get('http://imfeelingprimey.com').text, features="lxml")
@@ -39,7 +38,7 @@ def genbothproducts():
 	price2.set(str(price2split[1]))
 
 # Reset labels, reset button commands, restart tkinter and generate products
-correcttxt="hai bkguvtuhjcurTYVASTYAVSYUCVUYA DYASOY SA"
+correcttxt=""
 def restart():
 	price1Label.config(fg='white')
 	price2Label.config(fg='white')
@@ -112,16 +111,18 @@ def calcchoice():
 	# Change score accordingly, if the product prices are the same and calculation is equal to 0 do nothing to score.
 	if calc > 0 and choice == 1:
 		score = score + 1
-		correctLabel.config(text = "Correct!", fg="green")
+		correctLabel.config(text = "Cha-ching!", fg="green")
 	elif calc < 0 and choice == 2:
 		score = score + 1
-		correctLabel.config(text = "Correct!", fg="green")
+		correctLabel.config(text = "Cha-ching!", fg="green")
 	elif calc < 0 and choice == 1:
 		score = 0
-		correctLabel.config(text = "Incorrect...", fg="red")
+		correctLabel.config(text = "Uh oh you're broke", fg="red")
 	elif calc > 0 and choice == 2:
 		score = 0
-		correctLabel.config(text = "Incorrect...", fg="red")
+		correctLabel.config(text = "Uh oh you're broke", fg="red")
+	elif calc == 0:
+		correctLabel.config(text="Same price!", fg="blue")
 	# Update Tkinter score value so that it reflects on the GUI
 	scorevar.set(str(score))
 
@@ -175,6 +176,5 @@ product2button = tk.Button(gameFrame, command=choice2, font=buttonFont, textvari
 product2button.grid(row=5, column=5)
 
 # Initialize the window
-print("Here We Go!")
 raiseFrame(gameFrame)
 root.mainloop()
