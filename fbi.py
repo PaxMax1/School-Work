@@ -32,3 +32,9 @@ plt.xlabel('Year')
 plt.title('Percent of Population with Access to Electricity')
 plt.legend()
 plt.show()
+
+
+# CQ1- A countrys access to electricity can affect its access to computing innovations because computers require electricity and power to opperate.
+# If you don't have electricity to run a computer, than you can't use your computer and have access to it's innovations.
+
+# CQ2- Analyzing data like this can affect global change because we can see what countrys have issues in the world so that other countrys that are more advanced can help get them up on their feet.
